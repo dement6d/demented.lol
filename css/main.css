@@ -1,0 +1,90 @@
+:root {
+  --bg: rgb(5, 5, 5);
+  --link-hover: rgb(255, 100, 100);
+  --main-color: rgb(255, 0, 0);
+  --text: #d6d8e1;
+}
+
+@font-face {
+  font-family: "OldLondon";
+  src: url("/fonts/OldLondon.ttf");
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+img {
+  max-width: 100%;
+}
+
+div#content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  margin: auto;
+  max-width: 40rem;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+
+/* #content h1:first-child {
+  margin-bottom: 2.5rem;
+} */
+
+h1 {
+  width: 100%;
+  text-align: center;
+  font-family: "OldLondon";
+  font-size: 4rem;
+}
+
+h1 + p, .title + p {
+  margin-top: 1.5rem;
+}
+
+p {
+  font-size: 1.025rem;
+}
+
+h1 > a {
+  text-decoration-thickness: 0.25rem;
+}
+
+a {
+  transition: text-shadow 200ms;
+  color: var(--main-color);
+}
+
+h1 > a:hover {
+  text-shadow: 0px 0px 20px rgba(255, 0, 0, 0.8);
+}
+a:hover {
+  text-shadow: 0px 0px 10px rgba(255, 0, 0, 0.5), 0px 0px 25px rgba(255, 0, 0, 1);
+}
+
+.socials {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.social-icon {
+  max-width: 2.5rem;
+}
+
+@keyframes shine {
+  to { background-position: 200% center; }
+}
