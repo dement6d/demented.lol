@@ -1,5 +1,6 @@
 :root {
   --bg: rgb(5, 5, 5);
+  --bg-alt: rgb(10, 10, 10);
   --link-hover: rgb(255, 100, 100);
   --main-color: rgb(255, 0, 0);
   --text: #d6d8e1;
@@ -10,9 +11,26 @@
   src: url("/fonts/OldLondon.ttf");
 }
 
+::selection {
+  background-color: var(--main-color);
+  color: black;
+}
+
+img {
+  user-drag: none;  
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+strong { font-weight: 900; }
+
 body {
   background-color: var(--bg);
   color: var(--text);
+font-family: Arial, Helvetica, sans-serif;
 }
 
 img {
@@ -45,29 +63,33 @@ h1 + p, .title + p {
   margin-top: 1.5rem;
 }
 
-p {
-  font-size: 1.025rem;
+p + p {
+  margin-top: 0.5rem;
 }
 
-h1 > a {
-  text-decoration-thickness: 0.25rem;
+p {
+  font-size: 1.1rem;
+}
+
+h1 > a:hover, a > h1:hover {
+  text-shadow: 0px 0px 20px rgba(255, 0, 0, 0.8);
+  text-decoration-thickness: 0.2rem;
 }
 
 a {
+  text-decoration: none;
   transition: text-shadow 200ms;
   color: var(--main-color);
 }
-
-h1 > a:hover {
-  text-shadow: 0px 0px 20px rgba(255, 0, 0, 0.8);
-}
 a:hover {
-  text-shadow: 0px 0px 10px rgba(255, 0, 0, 0.5), 0px 0px 25px rgba(255, 0, 0, 1);
+  text-decoration: underline;
+  text-shadow: 0px 0px 10px var(--main-color),
+    0px 0px 25px var(--main-color);
 }
 
 .socials {
   display: flex;
-  gap: 2rem;
+  column-gap: 2rem;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
