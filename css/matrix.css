@@ -1,15 +1,12 @@
-#matrix {
+#matrix-holder {
   position: absolute;
+  overflow:hidden;
+  width: 100%;
+  min-height: 100%;
+}
+
+#matrix {
+  top: 0;
+  position: fixed;
   z-index: -1;
-}
-
-html {
-  height: 100%;
-  overflow: hidden;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
 }
