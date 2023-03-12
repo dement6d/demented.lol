@@ -1,0 +1,15 @@
+#matrix {
+  position: absolute;
+  z-index: -1;
+}
+
+html {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
