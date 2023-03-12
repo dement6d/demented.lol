@@ -1,8 +1,8 @@
 const canvas = document.getElementById('matrix');
 const context = canvas.getContext('2d');
 
-canvas.width = window.screen.width;
-canvas.height = window.screen.height;
+canvas.width = Math.max(window.screen.width, window.innerWidth);
+canvas.height = Math.max(window.screen.height, window.innerHeight);
 
 const katakana = 'アァカサタナハマヤャラワガザダバパイィキシチニヒミリヰギジヂビピウゥクスツヌフムユュルグズブヅプエェケセテネヘメレヱゲゼデベペオォコソトノホモヨョロヲゴゾドボポヴッン';
 const latin = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
