@@ -16,7 +16,7 @@
   color: black;
 }
 
-img {
+img, song.full-display {
   user-drag: none;  
   user-select: none;
   -moz-user-select: none;
@@ -109,4 +109,25 @@ a:hover {
 
 @keyframes shine {
   to { background-position: 200% center; }
+}
+
+song {
+  font-family: "OldLondon";
+  padding: 1.5rem;
+  position: fixed;
+  display: flex;
+  bottom: 0;
+}
+song.full-display {
+  display: flex;
+  overflow: hidden;
+  background-color: black;
+  color: red;
+  font-size: 3rem;
+  justify-content: center;
+  align-items: center;
+
+  top: 0;
+  position: fixed;
+  width: 100%;
 }

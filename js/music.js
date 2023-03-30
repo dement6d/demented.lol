@@ -1,4 +1,18 @@
-const song = new Audio('/audio/landfill-network_down.mp3');
+/**
+ * Picks a random element from the given array
+ * @param {Array} arr 
+ * @returns 
+ */
+const pickRandom = (arr) => arr[Math.floor(Math.random()* arr.length)];
+
+const songs = [
+  { file: '1.mp3', name: 'landfill network down' },
+  { file: '2.mp3', name: '♢ N O Ɔ Ǝ ⅄ Ǝ ↻' },
+  { file: '3.mp3', name: '23 – 1 = 222–1 – 1 ᐱᖓᓱᑦ °ordæliœrdæliœrdælie' }
+]
+
+const chosenSong = pickRandom(songs);
+const song = new Audio('/audio/' + chosenSong.file);
 song.volume = 0.5;
 song.loop = true;
 
@@ -11,5 +25,17 @@ song.play().catch(() => {
   })
   document.addEventListener('click', () => {
     song.play()
+  })
+})
+
+song.addEventListener('play', e => {
+  document.querySelector('body').insertAdjacentHTML('afterend', `<song class="full-display">${chosenSong.name}</song>`)
+  setTimeout(() => {document.querySelector('song').classList.remove('full-display')}, 15000)
+  document.addEventListener('mousedown', () => {
+    setTimeout(() => {document.querySelector('song').classList.remove('full-display')}, 1000)
+  })
+  // for phone
+  document.addEventListener('click', () => {
+    setTimeout(() => {document.querySelector('song').classList.remove('full-display')}, 1000)
   })
 })
