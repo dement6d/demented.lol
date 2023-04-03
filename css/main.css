@@ -8,7 +8,7 @@
 
 @font-face {
   font-family: "OldLondon";
-  src: url("/fonts/OldLondon.ttf");
+  src: url("/fonts/OldLondon.woff");
 }
 
 ::selection {
@@ -57,10 +57,11 @@ h1 {
   text-align: center;
   font-family: "OldLondon";
   font-size: 4rem;
+  margin-top: 1rem;
 }
 
 h1 + p, .title + p {
-  margin-top: 1.5rem;
+  margin-top: 0.5rem;
 }
 
 p + p {
@@ -126,8 +127,9 @@ song.full-display {
   font-size: 3rem;
   justify-content: center;
   align-items: center;
+  padding-bottom: 5rem;
 
   top: 0;
-  position: fixed;
+  position:fixed;
   width: 100%;
 }
