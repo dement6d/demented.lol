@@ -10,6 +10,8 @@ const songs = [
   { file: '2.mp3', name: '♢ N O Ɔ Ǝ ⅄ Ǝ ↻' },
   { file: '3.mp3', name: '23 – 1 = 222–1 – 1 ᐱᖓᓱᑦ °ordæliœrdæliœrdælie' },
   { file: '4.mp3', name: 'i can\'t feel my face' },
+  { file: '4.mp3', name: 'i can\'t feel my face' },
+  { file: '4.mp3', name: 'i can\'t feel my face' },
   { file: '4.mp3', name: 'i can\'t feel my face' }
 ]
 
