@@ -36,10 +36,10 @@ song.addEventListener('play', e => {
   document.querySelector('body').insertAdjacentHTML('afterend', `<song class="full-display">${chosenSong.name}</song>`)
   setTimeout(() => {document.querySelector('song').classList.remove('full-display')}, 15000)
   document.addEventListener('mousedown', () => {
-    setTimeout(() => {document.querySelector('song').classList.remove('full-display')}, 1000)
+    setTimeout(() => {document.querySelector('song').classList.remove('full-display')}, 1500)
   })
   // for phone
   document.addEventListener('click', () => {
-    setTimeout(() => {document.querySelector('song').classList.remove('full-display')}, 1000)
+    setTimeout(() => {document.querySelector('song').classList.remove('full-display')}, 1500)
   })
 })
