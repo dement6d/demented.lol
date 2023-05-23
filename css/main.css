@@ -39,18 +39,39 @@ img {
 
 div#content {
   display: flex;
+  flex-direction: row;
   justify-content: center;
-  flex-direction: column;
-
-  margin: auto;
-  max-width: 40rem;
-  padding-left: 2.5rem;
-  padding-right: 2.5rem;
 }
 
-/* #content h1:first-child {
-  margin-bottom: 2.5rem;
-} */
+#content > div {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+
+    min-width: 10%;
+    width: 30%;
+}
+
+#content > div:nth-child(2) {
+    min-width: 40%;
+    width: 40%;
+    max-width: 80%;
+}
+
+@media only screen and (max-width: 600px) {
+    div#content {
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    #content > div {
+        width: 100%;
+    }
+    
+    #content > div:nth-child(2) {
+        width: 80%;
+    }
+}
 
 h1 {
   width: 100%;
