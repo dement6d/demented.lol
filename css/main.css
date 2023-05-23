@@ -73,6 +73,13 @@ div#content {
         width: 80%;
     }
 }
+h2 {
+  width: 100%;
+  text-align: center;
+  font-family: "OldLondon";
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
 
 h1 {
   width: 100%;
