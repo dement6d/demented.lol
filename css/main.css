@@ -47,6 +47,7 @@ div#content {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
+    text-align: center;
 
     min-width: 10%;
     width: 30%;
@@ -109,7 +110,7 @@ a:hover {
     0px 0px 25px var(--main-color);
 }
 
-.socials {
+Socials {
   display: flex;
   column-gap: 2rem;
   flex-wrap: wrap;
@@ -153,4 +154,24 @@ song.full-display {
   top: 0;
   position:fixed;
   width: 100%;
+}
+
+/* Ads */
+
+.ads {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding-top: 2.5rem;
+    padding-left: 7.5%;
+    padding-right: 7.5%;
+}
+
+.ads iframe {
+    border-radius: 12px;
+}
+
+.ads iframe+iframe {
+    margin-top: 1rem;
 }
