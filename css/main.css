@@ -1,49 +1,57 @@
 :root {
-  --bg: rgb(5, 5, 5);
-  --bg-alt: rgb(10, 10, 10);
-  --link-hover: rgb(255, 100, 100);
-  --main-color: rgb(255, 0, 0);
-  --text: #d6d8e1;
+    --card-bg: rgb(5, 5, 5);
+    --card-bg-light: rgb(15, 15, 15);
+    --link-hover: rgb(255, 100, 100);
+    --main-color: rgb(255, 0, 0);
+    --text: #d6d8e1;
 }
 
 @font-face {
-  font-family: "OldLondon";
-  src: url("/fonts/OldLondon.woff");
+    font-family: "OldLondon";
+    src: url("/fonts/OldLondon.woff");
+}
+
+@font-face {
+    font-family: "LemonMilkBold";
+    src: url("/fonts/lemon_milk/LEMONMILK-Bold.otf");
 }
 
 ::selection {
-  background-color: var(--main-color);
-  color: black;
+    background-color: var(--main-color);
+    color: black;
 }
 
-img, song.full-display {
-  user-drag: none;  
-  user-select: none;
-  -moz-user-select: none;
-  -webkit-user-drag: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
+img,
+song.full-display {
+    user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
 }
 
-strong { font-weight: 900; }
+strong {
+    font-weight: 900;
+}
 
 body {
-  background-color: var(--bg);
-  color: var(--text);
-  font-family: Arial, Helvetica, sans-serif;
+    background-color: black;
+    color: var(--text);
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 img {
-  max-width: 100%;
+    max-width: 100%;
 }
 
 div#content {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
-#content > div {
+#content>div {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
@@ -53,7 +61,7 @@ div#content {
     width: 30%;
 }
 
-#content > div:nth-child(2) {
+#content>div:nth-child(2) {
     min-width: 40%;
     width: 40%;
     max-width: 80%;
@@ -64,103 +72,114 @@ div#content {
         align-items: center;
         flex-direction: column;
     }
-    
-    #content > div {
+
+    #content>div {
         width: 100%;
     }
-    
-    #content > div:nth-child(2) {
+
+    #content>div:nth-child(2) {
         width: 80%;
     }
 }
-h2 {
-  width: 100%;
-  text-align: center;
-  font-family: "OldLondon";
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
-}
 
 h1 {
-  width: 100%;
-  text-align: center;
-  font-family: "OldLondon";
-  font-size: 4rem;
-  margin-top: 1rem;
+    max-width: 100%;
+    width: 100%;
+    text-align: center;
+    font-family: "LemonMilkBold";
+    font-size: 3rem;
+    margin-top: 1rem;
 }
 
-h1 + p, .title + p {
-  margin-top: 0.5rem;
+h2 {
+    width: 100%;
+    text-align: center;
+    font-family: "LemonMilkBold";
+    font-size: 1.5rem;
+    font-weight: 900;
+    margin-bottom: 0.5rem;
 }
 
-p + p {
-  margin-top: 0.5rem;
+h1+p,
+.title+p {
+    margin-top: 0.5rem;
+}
+
+p+p {
+    margin-top: 0.5rem;
 }
 
 p {
-  font-size: 1.1rem;
+    font-size: 1.1rem;
 }
 
-h1 > a:hover, a > h1:hover {
-  text-shadow: 0px 0px 20px rgba(255, 0, 0, 0.8);
-  text-decoration-thickness: 0.2rem;
+h1>a:hover,
+a>h1:hover {
+    text-shadow: 0px 0px 20px rgba(255, 0, 0, 0.8);
+    text-decoration-thickness: 0.2rem;
 }
 
 a {
-  text-decoration: none;
-  transition: text-shadow 200ms;
-  color: var(--main-color);
-}
-a:hover {
-  text-decoration: underline;
-  text-shadow: 0px 0px 10px var(--main-color),
-    0px 0px 25px var(--main-color);
+    text-decoration: none;
+    transition: text-shadow 200ms;
+    color: var(--main-color);
 }
 
-Socials {
-  display: flex;
-  column-gap: 2rem;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+a:hover {
+    text-decoration: underline;
+    text-shadow: 0px 0px 10px var(--main-color),
+        0px 0px 25px var(--main-color);
+}
+
+Socials > .html-container {
+    margin-top: 2rem;
+
+    display: flex;
+    column-gap: 2rem;
+    row-gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 .social-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5rem;
-  margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
 }
 
 .social-icon {
-  max-width: 2.5rem;
+    max-width: 2.5rem;
 }
 
 @keyframes shine {
-  to { background-position: 200% center; }
+    to {
+        background-position: 200% center;
+    }
 }
 
 song {
-  font-family: "OldLondon";
-  padding: 1.5rem;
-  position: fixed;
-  display: flex;
-  bottom: 0;
+    font-family: "OldLondon";
+    padding: 1.5rem;
+    position: fixed;
+    display: flex;
+    bottom: 0;
 }
-song.full-display {
-  display: flex;
-  overflow: hidden;
-  background-color: black;
-  color: red;
-  font-size: 3rem;
-  justify-content: center;
-  align-items: center;
-  padding-bottom: 5rem;
 
-  top: 0;
-  position:fixed;
-  width: 100%;
+song.full-display {
+    display: flex;
+    overflow: hidden;
+    background-color: black;
+    color: red;
+    font-size: 3rem;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 5rem;
+
+    top: 0;
+    position: fixed;
+    width: 100%;
 }
 
 /* Ads */
@@ -181,4 +200,10 @@ song.full-display {
 
 .ads iframe+iframe {
     margin-top: 1rem;
+}
+
+.card {
+    padding: 1rem;
+    border-radius: 10px;
+    background-color: var(--card-bg);
 }
