@@ -5,10 +5,10 @@ canvas.width = Math.max(window.screen.width, window.innerWidth);
 canvas.height = Math.max(window.screen.height, window.innerHeight);
 
 const katakana = 'アァカサタナハマヤャラワガザダバパイィキシチニヒミリヰギジヂビピウゥクスツヌフムユュルグズブヅプエェケセテネヘメレヱゲゼデベペオォコソトノホモヨョロヲゴゾドボポヴッン';
-const latin = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-const nums = '0123456789';
+const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+const numbers = '0123456789';
 
-const alphabet = katakana + latin + nums;
+const characters = katakana + alphabet + numbers;
 
 const fontSize = 16;
 var columns = canvas.width/fontSize;
@@ -28,7 +28,7 @@ const draw = () => {
 
 	for(let i = 0; i < rainDrops.length; i++)
 	{
-		const text = alphabet.charAt(Math.floor(Math.random() * alphabet.length));
+		const text = characters.charAt(Math.floor(Math.random() * characters.length));
 		context.fillText(text, i*fontSize, rainDrops[i]*fontSize);
 		
 		if(rainDrops[i]*fontSize > canvas.height && Math.random() > 0.975){
