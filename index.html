@@ -41,42 +41,51 @@
                 <img src="/img/ethereum.png">
             </div>
         </div>
-        
+
         <style>
             #payment-methods {
                 background-color: rgba(255, 255, 255, 0.05);
                 padding: 0.5rem;
                 border-radius: 5px;
-        
+
                 display: flex;
                 flex-direction: row;
                 gap: 0.5rem;
-        
+
                 align-items: center;
                 justify-content: center;
             }
+
             #payment-methods img {
                 max-width: 1.25rem;
                 max-height: 1.25rem;
             }
-        
+
+            @media only screen and (max-width: 600px) {
+                #payment-methods img {
+                    max-width: 0.75rem;
+                    max-height: 0.75rem;
+                }
+            }
+
             header {
                 background-color: var(--card-bg);
                 height: 5rem;
-        
+
                 display: flex;
                 justify-content: center;
                 align-items: center;
-        
+
                 flex-grow: 5rem;
             }
-            header > div {
+
+            header>div {
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 width: 100%;
             }
-        
+
             #header-logo {
                 max-height: 4rem;
             }
@@ -93,7 +102,8 @@
                         <iframe
                             src="https://open.spotify.com/embed/track/7sP0YWXy53xA8AvKXlkdc7?utm_source=generator&theme=0"
                             width="100%" height="100%" frameBorder="0" allowfullscreen=""
-                            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+                            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                            loading="lazy">
                         </iframe>
                     </div>
                     <style>
@@ -182,7 +192,8 @@
                         <iframe
                             src="https://open.spotify.com/embed/track/6yZZjxuiwIqU0ou8ikgfOe?utm_source=generator&theme=0"
                             width="100%" height="100%" frameBorder="0" allowfullscreen=""
-                            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+                            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                            loading="lazy">
                         </iframe>
                     </div>
                     <style>
