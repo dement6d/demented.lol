@@ -11,7 +11,7 @@ function isValid(secret) {
 }
 
 function get2FASecretKey() {
-    return document.getElementById("secret").value.replace(/[^a-z0-9]/g, '')?.toLowerCase();
+    return document.getElementById("secret").value.replace(/[^a-z0-9]/gi, '')?.toLowerCase();
 }
 
 function update2FACode(secret, epoch) {
