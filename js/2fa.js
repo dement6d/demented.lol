@@ -59,10 +59,12 @@ setTimeout(function () {
 }, 1000 - new Date().getMilliseconds())
 
 
-const url = new URL(window.location.href);
-const params = new URLSearchParams(url.search);
-const secret = params.get('secret');
-if (secret?.length) {
-    document.getElementById('secret').value = secret;
-    document.getElementById('secret').dispatchEvent(new Event('input'));
-}
+document.addEventListener('DOMContentLoaded', () => {
+    const url = new URL(window.location.href);
+    const params = new URLSearchParams(url.search);
+    const secret = params.get('secret');
+    if (secret?.length) {
+        document.getElementById('secret').value = secret;
+        document.getElementById('secret').dispatchEvent(new Event('input'));
+    }
+});
