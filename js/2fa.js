@@ -64,4 +64,5 @@ const params = new URLSearchParams(url.search);
 const secret = params.get('secret');
 if (secret?.length) {
     document.getElementById('secret').value = secret;
+    document.getElementById('secret').dispatchEvent(new Event('input'));
 }
