@@ -57,3 +57,11 @@ setTimeout(function () {
         if (isValid(secret)) update2FACode(secret, getEpoch());
     }, 1000);
 }, 1000 - new Date().getMilliseconds())
+
+
+const url = new URL(window.location.href);
+const params = new URLSearchParams(url.search);
+const secret = params.get('secret');
+if (secret?.length) {
+    document.getElementById('secret').value = secret;
+}
