@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="title" content="demented">
+    <meta name="keywords" content="minecraft,sniper,sniping,og,ogu,ogusers,flipd,username,turbo,claimer,shop,market">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="language" content="English">
+
+    <!-- <meta property="og:url" content="https://demented.lol/">
+    <meta property="og:title" content="demented"> -->
+    <meta content="https://demented.lol/img/demented-embed-logo.png" property="og:image">
+
+    <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/matrix.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/2fa.css">
+    <title>2FA Code Generator - demented</title>
+</head>
+
+
+<body>
+    <header>
+        <!-- Added for support without Javascript -->
+        <div>
+            <a id="stream-link" href="/stream/femicide">
+                <img src="/img/music-note.png">
+            </a>
+        </div>
+        <div>
+            <a href="/">
+                <img id="header-logo" src="/img/demented.png" />
+            </a>
+        </div>
+        <div>
+            <div id="payment-methods">
+                <img src="/img/paypal.png">
+                <img src="/img/bitcoin.png">
+                <img src="/img/monero.png">
+                <img src="/img/litecoin.png">
+                <img src="/img/ethereum.png">
+            </div>
+        </div>
+        <!-- Added for support without Javascript -->
+    </header>
+
+    <div id="content">
+        <div id="container-2fa">
+            <h2 for="secret"><b>2FA Code Generator</b></h2><br>
+            <input type="password" id="secret" placeholder="•••• •••• •••• ••••" oninput="check();" autofocus=""
+                autocomplete="off"><br>
+            <div>
+                <div>
+                    <h2 id="code" style="float: left; margin-right: 10px; display: none;">962122</h2>
+                    <button id="copy" style="display: none;" class="btn btn-primary btn-sm rounded-0" type="button"
+                        onclick="copyCode();" data-toggle="tooltip" data-placement="top" title="Copy">
+                        <svg class="svg-inline--fa fa-clipboard fa-w-12" aria-hidden="true" data-prefix="fa"
+                            data-icon="clipboard" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"
+                            data-fa-i2svg="">
+                            <path fill="currentColor"
+                                d="M384 112v352c0 26.51-21.49 48-48 48H48c-26.51 0-48-21.49-48-48V112c0-26.51 21.49-48 48-48h80c0-35.29 28.71-64 64-64s64 28.71 64 64h80c26.51 0 48 21.49 48 48zM192 40c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24m96 114v-20a6 6 0 0 0-6-6H102a6 6 0 0 0-6 6v20a6 6 0 0 0 6 6h180a6 6 0 0 0 6-6z">
+                            </path>
+                        </svg>
+                    </button>
+                </div>
+                <p id="info" style="clear: both; display: none;">New code in 12 seconds.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer></footer>
+    <div id="matrix-holder">
+        <canvas id="matrix"></canvas>
+    </div>
+
+    <script src="/js/2fa.js"></script>
+    <script src="/js/jsOTP.min.js"></script>
+    <script src="/js/jquery-3.6.4.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/matrix.js"></script>
+</body>
